@@ -2,16 +2,14 @@ console.log('Here is : ', 'array')
 
 
 
-/*
+
 1
-Correct the syntax error
- [ 1,7  9  45, ]
+// Correct the syntax error
+ var x= [ 1,7 , 9 , 45 ];
 
- ["Str" "alex","moh"
+ var y= ["Str", "alex","moh" ,'the','fox' ,'over', "lazy", 'dog'  ];
 
- 'the','fox' 'over' lazy, 'dog',  ]
 
-*/
 
 
 /*
@@ -19,7 +17,12 @@ Correct the syntax error
 What the index of "Banana","Tomato"
 var fruits=["Tomato","Banana","Watermelon"]
 
+index of "Banana": 1
+index of "Tomato": 0
+
 */
+
+
 
 
 /*
@@ -30,6 +33,13 @@ Create an array represents your:
 3- Favorite Movie (4)
 */
 
+var food = ["mansaf", "msa5n", "mkmora", "broasted", "mandi"];
+
+
+var sport = ["tennis", "football", "basket ball"];
+
+
+var Movie = ["john wick", "captin marvel", "avengers", "alaaddin"];
 
 /*
 4
@@ -40,7 +50,11 @@ and return the first element in an array
 Ex: firstOfArray([1,4,5]) => 1
 Ex: firstOfArray(["t","u","g","x"]) => "t"
 */
-
+function  firstOfArray (x)
+{
+    
+    return x[0];
+}
 
 /*
 5
@@ -51,7 +65,11 @@ and return the first element in an array
 Ex: lastOfArray([1,4,5]) => 5
 Ex: lastOfArray(["t","u","g","x"]) => "x"
 */
-
+function lastOfArray (x)
+{
+    var l= x.length
+    return x[l-1];
+}
 
 /*
 6
@@ -61,6 +79,12 @@ var array = [0,5,7,9]
 => [1,3,4,6,8,9,10]
 */
 
+var array = [0,5,7,9]
+console.log (array.shift())
+console.log (array.shift())
+console.log (array.shift())
+console.log (array.unshift(1, 3, 4, 6, 8))
+console.log (array.push(10))
 
 /*
 7
@@ -68,6 +92,12 @@ Using the console try to figure out what the thing thats (push, unshift, shift, 
 
 var array2 = [5,9,-7,3.5]
 */
+var array2 = [5,9,-7,3.5]
+
+console.log (array2.push(1))
+console.log (array2.pop())
+console.log (array2.unshift(10))
+console.log (array2.shift())
 
 
 /*
@@ -80,7 +110,14 @@ and return the two middle elemnt in an array if it is have an even elemnets
 Ex: middleOfArray([1,4,5]) => 4
 Ex: middleOfArray(["t","u","g","x"]) =>"u and g"
 */
+function  middleOfArray (x)
+{ var l= x.length;
 
+    if (l%2!==0)
+    return x[(l-1)/2]
+
+    return ( x[l/2-1]+ " and "+ x[l/2])
+}
 
 /*
 9
@@ -95,6 +132,16 @@ var nums= [1,2,3,8,9]
 nums => [5,-22,3.5,44,98,44]
 */
 
+var animals = ['cat', 'ele', 'bird']
+animals= ['zebra', 'elephant'];
+
+var nums= [1,2,3,8,9];
+nums[0]= 5;
+nums[1]= -22;
+nums[2]= 3.5;
+nums[3]= 44;
+nums[4]= 98;
+nums[5]= 44;
 
 /*
 10
@@ -111,6 +158,10 @@ Ex: indexOfArray(nums,4) => 9
 */
 
 
+function  indexOfArray (x, y){
+return x[y]    ;
+}
+
 /*
 11
 Create a function called arrayExceptLast
@@ -122,7 +173,10 @@ Ex: arrayExceptLast(nums) =>  [1,2,3,8]
 
 **try more cases by your self
 */
-
+function  arrayExceptLast (x)
+{var l = x.length;
+return x.slice(0, l-1 )    
+}
 
 /*
 12
@@ -135,7 +189,12 @@ Ex: addToEnd(nums,55) =>  [1,2,3,8,55]
 
 **try more cases by your self
 */
+function addToEnd (x,y)
+{
+    var l = x.length;
+    return x[l-1]=y;
 
+}
 
 // all the exercises below should solved 2 times: 1- for loop 2- while lopp
 /*
