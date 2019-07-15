@@ -212,10 +212,15 @@ Ex: sumArray(nums) => 23
 
 function sumArray (x)
 {   var sum = 0;
-    for (var i=0; i<x.length; i++)
-    {
-        sum = sum + x[i];
-    }
+    var i=0
+     while (i<x.length) {
+        sum = sum + x[i]; 
+
+        i++
+
+        
+     }                                   
+  
 return sum;
 }
 
@@ -233,11 +238,18 @@ Ex: minInArray(nums) => 1
 */
 function  minInArray (x)
 {   var min = x[0];
-    for (var i=1; i<x.length; i++)
-    {
-        if (x[i]<min)
-        min = x[i];
+    var i=1
+    while (i<x.length) {
+        
+            if (x[i]<min)
+            min = x[i];
+        
+     
+        
+        i++
     }
+    
+   
 return min;
 }
 
@@ -255,11 +267,18 @@ Ex: removeFromArray(nums,8) => [1,2,3,9]
 */
 function removeFromArray (x,y)
 { 
-    for (var i=0; i<x.length; i++)
-    {
-        if (x[i]===y)
-        x.splice(i,1) ;
+
+    var i=0;
+
+    while (i<x.length) {
+        
+            if (x[i]===y)
+            x.splice(i,1) ;
+        
+        i++  
     }
+   
+   
 return x;
 }
 
@@ -278,11 +297,18 @@ Ex: oddArray(nums) => [1,3,9]
 */
 function oddArray (x)
 { var y =[];
-for (var i=0; i<x.length; i++)
-    {
-        if (x[i]%2===1)
-        y.push(x[i]) ;
+
+    var i=0
+    while (i<x.length) {
+        
+            if (x[i]%2===1)
+            y.push(x[i]) ;
+         
+        i++;
     }
+
+
+  
 return y;
 }
 /*
@@ -302,10 +328,16 @@ Ex: aveArray(nums) => 16.6
 */
 function aveArray (x)
 { var sum = 0;
-    for (var i=0; i<x.length; i++)
-    {
+    var i=0;
+    while (i<x.length) {
+
         sum = sum + x[i];
+
+        i++
     }
+
+    
+
 return sum/x.length;
 }
 
@@ -324,13 +356,16 @@ Ex: shorterInArray(strings) => "alex"
 
 function shorterInArray (x)
 { var short = x[0];
+    var i=0;
+    while (i<x.length) {
 
-    for (var i=0; i<x.length; i++)
-    { 
         if (x[i].length<short.length)
-       short = x[i];
-    }
+        short = x[i];
 
+        i++
+        
+    }
+   
 return short;
 } 
 
@@ -352,12 +387,15 @@ function  repeatChar (str, chr)
 {
 var rep =0;
 var l = str.length;
-
-for (var i=0; i<l; i++)
-{ 
+var i=0;
+while ( i<l) {
     if (str[i]===chr)
     rep++;
+    i++;
+    
 }
+
+
 
 return rep;
 }
@@ -378,13 +416,16 @@ Ex: evenIndexOddLength(strings) => ["madrasa"]
 function  evenIndexOddLength (x){
 
 var arr=[];
+var i=0;
+while ( i<x.length) {
+    
+    if (x[i].length%2===1)
+    arr.push(x[i])
 
-    for (var i=0; i<x.length; i=i+2)
-    { 
+    i=i+2
+}
 
-        if (x[i].length%2===1)
-       arr.push(x[i])
-    }
+  
 
 
 return arr;
@@ -405,12 +446,14 @@ Ex: powerElementIndex(nums) => [1, 5, 16, 27, 16, 100000]
 
 function  powerElementIndex (x)
 { var y =[];
+    var i=0;
+    while (i<x.length) {
 
-    for (var i=0; i<x.length; i++)
-    { 
         y[i]= x[i]**i;
-           
+        i++
+        
     }
+    
 return y;
 }
 
@@ -430,9 +473,17 @@ Ex: evenNumberEvenIndex(nums) => [2,8,34]
 
 function  evenNumberEvenIndex (x)
 {var y= [];
-    for (var i = 0; i<x.length; i=i+2)
-    { if (x[i]%2===0)
-        y.push (x[i]);        
+
+    var i = 0;
+    while (i<x.length) {
+
+
+        if (x[i]%2===0)
+        y.push (x[i]);
+        i=i+2  
+        
     }
+
+
 return y;
 }
