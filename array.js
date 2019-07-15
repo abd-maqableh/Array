@@ -210,6 +210,14 @@ Ex: sumArray(nums) => 23
 **try more cases by your self
 */
 
+function sumArray (x)
+{   var sum = 0;
+    for (var i=0; i<x.length; i++)
+    {
+        sum = sum + x[i];
+    }
+return sum;
+}
 
 /*
 14
@@ -223,7 +231,15 @@ Ex: minInArray(nums) => 1
 ** solve it one time using for loop and another using while loop
 **try more cases by your self
 */
-
+function  minInArray (x)
+{   var min = x[0];
+    for (var i=1; i<x.length; i++)
+    {
+        if (x[i]<min)
+        min = x[i];
+    }
+return min;
+}
 
 /*
 15
@@ -232,11 +248,20 @@ that accept an array and elemnt to remove
 and return the array after remove this elemnt from it
 
 var nums= [1,2,3,8,9]
-Ex: minInArray(nums,8) => [1,2,3,9]
+Ex: removeFromArray(nums,8) => [1,2,3,9]
 
 ** solve it one time using for loop and another using while loop
 **try more cases by your self
 */
+function removeFromArray (x,y)
+{ 
+    for (var i=0; i<x.length; i++)
+    {
+        if (x[i]===y)
+        x.splice(i,1) ;
+    }
+return x;
+}
 
 
 /*
@@ -251,8 +276,15 @@ Ex: oddArray(nums) => [1,3,9]
 ** solve it one time using for loop and another using while loop
 **try more cases by your self
 */
-
-
+function oddArray (x)
+{ var y =[];
+for (var i=0; i<x.length; i++)
+    {
+        if (x[i]%2===1)
+        y.push(x[i]) ;
+    }
+return y;
+}
 /*
 17
 Create a function called aveArray
@@ -268,7 +300,14 @@ Ex: aveArray(nums) => 16.6
 ** solve it one time using for loop and another using while loop
 **try more cases by your self
 */
-
+function aveArray (x)
+{ var sum = 0;
+    for (var i=0; i<x.length; i++)
+    {
+        sum = sum + x[i];
+    }
+return sum/x.length;
+}
 
 /*
 18
@@ -282,6 +321,18 @@ Ex: shorterInArray(strings) => "alex"
 ** solve it one time using for loop and another using while loop
 **try more cases by your self
 */
+
+function shorterInArray (x)
+{ var short = x[0];
+
+    for (var i=0; i<x.length; i++)
+    { 
+        if (x[i].length<short.length)
+       short = x[i];
+    }
+
+return short;
+} 
 
 
 /*
@@ -297,7 +348,19 @@ Ex: repeatChar(string,"z") => 0
 ** solve it one time using for loop and another using while loop
 **try more cases by your self
 */
+function  repeatChar (str, chr)
+{
+var rep =0;
+var l = str.length;
 
+for (var i=0; i<l; i++)
+{ 
+    if (str[i]===chr)
+    rep++;
+}
+
+return rep;
+}
 
 /*
 20
@@ -312,6 +375,20 @@ Ex: evenIndexOddLength(strings) => ["madrasa"]
 **try more cases by your self
 */
 
+function  evenIndexOddLength (x){
+
+var arr=[];
+
+    for (var i=0; i<x.length; i=i+2)
+    { 
+
+        if (x[i].length%2===1)
+       arr.push(x[i])
+    }
+
+
+return arr;
+}
 
 /*
 21
@@ -320,11 +397,22 @@ that accept an array of number
 and return a new array that have the elemnt power by the index of it self
 
 var nums= [44, 5, 4, 3, 2, 10]
-Ex: powerElementIndex(nums) => [0, 5, 16, 27, 16, 100000]
+Ex: powerElementIndex(nums) => [1, 5, 16, 27, 16, 100000]
 
 ** solve it one time using for loop and another using while loop
 **try more cases by your self
 */
+
+function  powerElementIndex (x)
+{ var y =[];
+
+    for (var i=0; i<x.length; i++)
+    { 
+        y[i]= x[i]**i;
+           
+    }
+return y;
+}
 
 
 /*
@@ -339,3 +427,12 @@ Ex: evenNumberEvenIndex(nums) => [2,8,34]
 ** solve it one time using for loop and another using while loop
 **try more cases by your self
 */
+
+function  evenNumberEvenIndex (x)
+{var y= [];
+    for (var i = 0; i<x.length; i=i+2)
+    { if (x[i]%2===0)
+        y.push (x[i]);        
+    }
+return y;
+}
